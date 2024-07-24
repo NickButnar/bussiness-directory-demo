@@ -1,4 +1,4 @@
-import { Button, TextInput, View, StyleSheet } from 'react-native';
+import { Text, TextInput, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { useSignUp } from '@clerk/clerk-expo';
 import Spinner from 'react-native-loading-spinner-overlay';
 import { useState } from 'react';
@@ -80,7 +80,9 @@ const register = () => {
 						style={defaultStyles.inputField}
 					/>
 
-					<Button onPress={onSignUpPress} title="Sign up"></Button>
+					<TouchableOpacity onPress={onSignUpPress} style={[defaultStyles.btnPrimary, {marginTop: 20}]}>
+						<Text style={defaultStyles.textBtnPrimary}>Sign up</Text>
+					</TouchableOpacity>
 				</>
 			)}
 
@@ -94,7 +96,10 @@ const register = () => {
 							onChangeText={setCode}
 						/>
 					</View>
-					<Button onPress={onPressVerify} title="Verify Email"></Button>
+
+					<TouchableOpacity onPress={onPressVerify} style={[defaultStyles.btnPrimary, {marginTop: 20}]}>
+						<Text style={defaultStyles.textBtnPrimary}>Verify Email</Text>
+					</TouchableOpacity>
 				</>
 			)}
 		</View>
@@ -109,8 +114,4 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		padding: 20
 	},
-	button: {
-		margin: 8,
-		alignItems: 'center'
-	}
 });

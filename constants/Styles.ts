@@ -15,23 +15,38 @@ export const defaultStyles = StyleSheet.create({
     borderColor: '#ABABAB',
     marginVertical: 4
   },
-  btn: {
-    backgroundColor: 'green',
-    height: 50,
-    borderRadius: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontFamily: 'montserrat-semibold',
+  btnPrimary: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'center',
+		gap: 10,
+		borderWidth: 2,
+		borderRadius: 8,
+		backgroundColor: '#3355ff',
+		borderColor: '#3355ff',
+		height: 44,
+		paddingHorizontal: 10
+	},
+  textBtnPrimary: {
+		textAlign: 'center',
+		color: "#fff",
+		fontSize: 14,
+		fontFamily: 'montserrat-semibold',
+	},
+  btnSecondary: {
+    flexDirection: 'row',
+		alignItems: 'center',
+		justifyContent: 'center',
+		gap: 10,
+		borderWidth: 2,
+		borderRadius: 8,
+		backgroundColor: '#fff',
+		borderColor: '#3355ff',
+		height: 44,
   },
-  btnText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
-    fontFamily: 'montserrat-semibold',
-  },
-  btnIcon: {
-    position: 'absolute',
-    left: 16,
-    fontFamily: 'montserrat-semibold',
-  },
+  textBtnSecondary: {
+    color: "#3355ff",
+		fontSize: 14,
+		fontFamily: 'montserrat-semibold',
+  }
 })

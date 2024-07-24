@@ -1,4 +1,4 @@
-import { View, StyleSheet, TextInput, Button } from 'react-native';
+import { View, StyleSheet, TextInput, TouchableOpacity, Text } from 'react-native';
 import React, { useState } from 'react';
 import { Stack } from 'expo-router';
 import { useSignIn } from '@clerk/clerk-expo';
@@ -56,7 +56,9 @@ const PwReset = () => {
 						style={defaultStyles.inputField}
 					/>
 
-					<Button onPress={onRequestReset} title="Send Reset Email"></Button>
+					<TouchableOpacity onPress={onRequestReset} style={[defaultStyles.btnPrimary, { marginTop: 20 }]}>
+						<Text style={defaultStyles.textBtnPrimary}>Reset password</Text>
+					</TouchableOpacity>
 				</>
 			)}
 
@@ -77,7 +79,10 @@ const PwReset = () => {
 							style={defaultStyles.inputField}
 						/>
 					</View>
-					<Button onPress={onReset} title="Set new Password"></Button>
+
+					<TouchableOpacity onPress={onReset} style={[defaultStyles.btnPrimary, { marginTop: 20 }]}>
+						<Text style={defaultStyles.textBtnPrimary}>Set new Password</Text>
+					</TouchableOpacity>
 				</>
 			)}
 		</View>
