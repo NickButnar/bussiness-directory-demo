@@ -48,5 +48,23 @@ export const defaultStyles = StyleSheet.create({
     color: "#3355ff",
 		fontSize: 14,
 		fontFamily: 'montserrat-semibold',
-  }
+  },
+	card: {
+		backgroundColor: '#fff',
+    padding: 24,
+    borderRadius: 16,
+    marginHorizontal: 24,
+    marginTop: 24,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    shadowOffset: {
+      width: 1,
+      height: 2,
+    },
+    alignItems: 'center',
+    gap: 14,
+    marginBottom: 24,
+	}
 })

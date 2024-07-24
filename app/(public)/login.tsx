@@ -1,7 +1,7 @@
 import { useOAuth, useSignIn } from '@clerk/clerk-expo';
 import { Link } from 'expo-router';
 import React, { useState } from 'react';
-import { View, StyleSheet, TextInput, Pressable, Text, TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, StyleSheet, TextInput, Pressable, Text, TouchableOpacity, TouchableWithoutFeedback, Keyboard, SafeAreaView } from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
 import { defaultStyles } from "../../constants/Styles.ts";
 import { useWarmUpBrowser } from "../../hooks/useWarmUpBrowser.ts";
@@ -62,7 +62,7 @@ const login = () => {
 	};
 
 	return (
-		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+		<TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false} >
 			<View style={styles.container}>
 				<Spinner visible={loading} />
 
@@ -80,6 +80,7 @@ const login = () => {
 					secureTextEntry
 					style={defaultStyles.inputField}
 				/>
+
 
 				<View style={{gap: 16, marginTop: 20}}>
 					<TouchableOpacity onPress={onSignInPress} style={defaultStyles.btnPrimary}>
